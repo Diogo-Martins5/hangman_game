@@ -45,16 +45,10 @@ function App() {
   const handleKeyClick = (key: LowercaseLetter) => {
     if (isLoser || isWinner) return; // just to make sure we don't have another guess
     addLetter(key);
-    if (wordHasASet.has(key)) {
-      console.log(isWinner);
-    } else {
+    if (!wordHasASet.has(key)) {
       setNumberOfWrongGuesses((currentNumber) => currentNumber + 1);
     }
   };
-
-  useEffect(() => {
-    console.log('Word to guess: ' + wordToGuess);
-  }, []);
 
   return (
     <div className={styles.divStyle}>
