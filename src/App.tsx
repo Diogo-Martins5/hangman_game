@@ -32,7 +32,7 @@ function App() {
   if (isWinner) {
     top_msg = `${TOP_MSGS.win}`;
   } else if (isLoser) {
-    top_msg = `${TOP_MSGS.lose}`;
+    top_msg = `${TOP_MSGS.lose} ${wordToGuess}`;
   } else {
     top_msg = `${TOP_MSGS.default}`;
   }

@@ -3,7 +3,7 @@ const hang_width = 250;
 
 export const TOP_MSGS = {
   win: 'Parabéns, acertou!',
-  lose: 'Perdeu! A palavra certa era: ',
+  lose: 'Perdeu! A palavra certa era:',
   default: 'Jogo da forca, descubra a palavra',
 } as const;
 
