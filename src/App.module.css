@@ -12,6 +12,10 @@
   text-align: center;
 }
 
-.keyboard {
-  align-self: stretch;
+.keyboardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
 }

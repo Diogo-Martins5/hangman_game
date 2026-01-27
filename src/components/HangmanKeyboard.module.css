@@ -1,19 +1,23 @@
-.keyboard {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
-  gap: 0.5rem;
+.keyboardRow {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
 }
 
 .btn {
-  width: 100%;
-  border: 3px solid black;
+  width: calc((100% - (10px * (var(--max-cols) - 1))) / var(--max-cols));
   aspect-ratio: 1/1;
+  border: 3px solid black;
+  color: black;
   font-size: 2.5rem;
   text-transform: uppercase;
   padding: 0.5rem;
   font-weight: bold;
   cursor: pointer;
-  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn:hover:not(:disabled),

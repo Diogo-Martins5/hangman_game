@@ -22,12 +22,6 @@ export const DRAW = {
   leg_size: hang_height / 5,
 } as const;
 
-export const KeyState = {
-  DEFAULT: 0,
-  RIGHT_GUESS: 1,
-  WRONG_GUESS: 2,
-} as const;
-
 export const ALL_LETTERS = [
   'q',
   'w',
@@ -55,4 +49,10 @@ export const ALL_LETTERS = [
   'b',
   'n',
   'm',
+] as const;
+
+export const KEYBOARD = [
+  ALL_LETTERS.slice(0, 10),
+  ALL_LETTERS.slice(10, 19),
+  ALL_LETTERS.slice(19, 26),
 ] as const;

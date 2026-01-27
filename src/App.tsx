@@ -4,7 +4,7 @@ import HangmanDrawing from './components/HangmanDrawing';
 import HangmanWord from './components/HangmanWord';
 import HangmanKeyboard from './components/HangmanKeyboard';
 import { useState } from 'react';
-import { TOP_MSGS } from './constants';
+import { KEYBOARD, TOP_MSGS } from './constants';
 import type { LowercaseLetter } from './hangman.types';
 import { isLowercaseLetter } from './hangman.types';
 
@@ -50,12 +50,17 @@ function App() {
     }
   };
 
+  const maxKeysKB = Math.max(...KEYBOARD.map((kb_row) => kb_row.length));
+
   return (
     <div className={styles.divStyle}>
       <div className={styles.textStyle}>{top_msg}</div>
       <HangmanDrawing bodyPartsVisible={numberOfWrongGuesses} />
       <HangmanWord word={wordToGuess} guessedLetters={guessedLetters} />
-      <div className={styles.keyboard}>
+      <div
+        className={styles.keyboardContainer}
+        style={{ '--max-cols': maxKeysKB } as React.CSSProperties}
+      >
         <HangmanKeyboard
           word={wordToGuess}
           guessedLetters={guessedLetters}
